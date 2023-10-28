@@ -1,0 +1,130 @@
+CREATE DATABASE IF NOT EXISTS electronic_repair ;
+
+USE `electronic_repair`;
+
+/*Table structure for table `admin` */
+
+DROP TABLE IF EXISTS `admin`;
+
+CREATE TABLE `admin` (
+  `username` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL
+);
+
+/*Data for the table `admin` */
+
+insert  into `admin`(`username`,`password`) values ('admin','admin');
+
+/*Table structure for table `bill` */
+
+DROP TABLE IF EXISTS `bill`;
+
+CREATE TABLE `bill` (
+  `tusername` varchar(100) DEFAULT NULL,
+  `tlocation` varbinary(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `mobile` varchar(100) DEFAULT NULL,
+  `bookingid` varchar(100) DEFAULT NULL,
+  `amount` varchar(100) DEFAULT NULL,
+  `device` varchar(100) DEFAULT NULL,
+  `status` varbinary(1000) DEFAULT 'pending'
+);
+
+/*Data for the table `bill` */
+
+insert  into `bill`(`tusername`,`tlocation`,`email`,`mobile`,`bookingid`,`amount`,`device`,`status`) values ('moulali','Begumpet','chotu.1000projects@gmail.com','7702177291','5021','1000','Laptop','paid');
+
+/*Table structure for table `booking` */
+
+DROP TABLE IF EXISTS `booking`;
+
+CREATE TABLE `booking` (
+  `device` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `mobile` varchar(100) DEFAULT NULL,
+  `latitude` varchar(100) DEFAULT NULL,
+  `longitude` varchar(100) DEFAULT NULL,
+  `status` varchar(100) DEFAULT 'pending',
+  `bookingid` varchar(100) DEFAULT 'pending'
+);
+
+/*Data for the table `booking` */
+
+insert  into `booking`(`device`,`email`,`address`,`mobile`,`latitude`,`longitude`,`status`,`bookingid`) values ('Laptop','chotu.1000projects@gmail.com','Begumpet','7702177291','17.45939047315574','78.46672409372331','booked','5044'),('Laptop','chotu.1000projects@gmail.com','Begumpet','0987456123','17.449741014730538','78.47122192382812','booked','5044'),('Laptop','chotu.1000projects@gmail.com','Begumpet','0987456123','17.45726167288445','78.46620910959246','pending','pending');
+
+/*Table structure for table `customer` */
+
+DROP TABLE IF EXISTS `customer`;
+
+CREATE TABLE `customer` (
+  id   INTEGER PRIMARY KEY AUTOINCREMENT,
+  `username` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `gender` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `mobile` varchar(100) DEFAULT NULL,
+);
+
+/*Data for the table `customer` */
+
+insert  into `customer`(`username`,`password`,`gender`,`email`,`address`,`mobile`,`latitude`,`longitude`) values ('chotu','123','Male','chotu.1000projects@gmail.com','Begumpet','7702177291','17.45939047315574','78.46655243234636');
+
+/*Table structure for table `ewaste` */
+
+DROP TABLE IF EXISTS `ewaste`;
+
+CREATE TABLE `ewaste` (
+  `username` varchar(100) DEFAULT NULL,
+  `mobile` varchar(100) DEFAULT NULL,
+  `items` varchar(100) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `status` varchar(100) DEFAULT 'pending'
+);
+
+/*Data for the table `ewaste` */
+
+insert  into `ewaste`(`username`,`mobile`,`items`,`address`,`status`) values ('chotu','7702177291','rods=10\r\nchips=2','Begumpet','collected');
+
+/*Table structure for table `response` */
+
+DROP TABLE IF EXISTS `response`;
+
+CREATE TABLE `response` (
+  `tusername` varchar(100) DEFAULT NULL,
+  `tlocation` varchar(100) DEFAULT NULL,
+  `device` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `mobile` varchar(100) DEFAULT NULL,
+  `bookingid` varchar(100) DEFAULT NULL,
+  `rating` varchar(100) DEFAULT 'pending'
+);
+
+/*Data for the table `response` */
+
+insert  into `response`(`tusername`,`tlocation`,`device`,`email`,`address`,`mobile`,`bookingid`,`rating`) values ('moulali','Begumpet','Laptop','chotu.1000projects@gmail.com','Begumpet','7702177291','5021','pending'),('moulali','Begumpet','Laptop','moulali@1000projectsgmail.com','Begumpet','7702177291','6736','5'),('qwe','Begumpet','Laptop','chotu.1000projects@gmail.com','Begumpet','0987456123','5044','pending');
+
+/*Table structure for table `tech` */
+
+DROP TABLE IF EXISTS `tech`;
+
+CREATE TABLE `tech` (
+  `username` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `ttype` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `gender` varchar(100) DEFAULT NULL,
+  `dob` varchar(100) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `mobile` varchar(100) DEFAULT NULL,
+  `latitude` varchar(100) DEFAULT NULL,
+  `longitude` varchar(100) DEFAULT NULL,
+  `status` varchar(100) DEFAULT 'pending',
+  `rating` varchar(100) DEFAULT NULL
+);
+
+/*Data for the table `tech` */
+
+insert  into `tech`(`username`,`password`,`ttype`,`email`,`gender`,`dob`,`address`,`mobile`,`latitude`,`longitude`,`status`,`rating`) values ('moulali','123','Laptop','moulali@1000projectsgmail.com','Male','2019-12-05','Begumpet','7702177291','17.458067651874806','78.46673750476839','activated','5.0'),('qwe','123','Laptop','qwe@gmail.com','Male','2019-12-10','Begumpet','9897878786','17.449741014730538','78.47122192382812','activated',NULL);

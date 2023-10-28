@@ -1,0 +1,417 @@
+body {
+    margin: 0;
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    height: 100vh;
+    width:100%;
+}
+
+.home-bg {
+    background: white url("../img/3.jpg") no-repeat scroll;
+    width:100%;
+    
+}
+
+header {
+background: linear-gradient(to right, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125));
+    width:100%;
+    color: black;
+    text-align: center;
+    /*height: 60px;*/
+}
+.main-header h1{
+    margin:0;
+    vertical-align: middle;
+    padding:21px;
+}
+
+nav {
+    background-color: bisque;
+    overflow: hidden;
+    box-shadow: 0 0 20px crimson;
+    font-family: Georgia, sans-serif;
+    width:100vw;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 12px 25px;
+    font-size: 18px;
+    display: block;
+    font-weight: 300;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+nav ul li a.active {
+    background-color: lavenderblush;
+    color: black;
+}
+
+.main-footer {
+    background: white url("../img/dance.jpg") no-repeat scroll top;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: 900;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.main-footer a {
+    color: orange;
+    text-decoration: none;
+}
+
+img.bi {
+    border: 1px solid white;
+    box-shadow: 0 0 20px white;
+    border-radius: 20px;
+    padding: 9px;
+/*    width: 50%;
+    height: 50%;*/
+}
+
+
+/*Login Form*/
+
+div.login {
+    width: 25%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    border: 4px solid tomato;
+    box-shadow: 0 0 15px blue;
+}
+
+.login {
+    text-align: center;
+    width: 350px;
+    box-sizing: border-box;
+    padding: 40px;
+    background: rgb(84, 86, 99);
+    border-radius: 0 110px;
+}
+
+.login h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.login .input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.login .input-group input,
+select {
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 0 10px;
+    font-weight: 300;
+    background-color: gainsboro;
+}
+
+.login .input-group span {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    padding: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    background: gainsboro;
+    text-transform: uppercase;
+}
+
+.login .input-group input:focus~span {
+    top: -10px;
+    left: 15px;
+    font-size: 12px;
+    padding: 2px 4px;
+    border: 1px solid white;
+    background: tomato;
+    color: white;
+}
+
+.login .input-group input:valid~span {
+    top: -10px;
+    left: 15px;
+    font-size: 12px;
+    padding: 2px 4px;
+    border: 1px solid white;
+    background: green;
+    color: white;
+}
+
+.login .input-group input[type="submit"] {
+    background: rgb(187, 104, 70);
+    border: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+}
+
+.login .input-group input[type="submit"]:hover {
+    background: sandybrown;
+    box-shadow: 0 0 15px black;
+    color: black;
+}
+
+input[type="submit"] {
+    background: rgb(187, 104, 70);
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 0 10px;
+    font-weight: 300;
+}
+
+input[type="submit"]:hover {
+    background: sandybrown;
+    box-shadow: 0 0 15px whitesmoke;
+    color: black;
+}
+
+div.login a {
+    text-decoration: none;
+    color: rgb(252, 198, 126);
+    font-family: Georgia, sans-serif;
+    font-size: 18px;
+    text-shadow: 0 0 1px black;
+}
+
+
+/*Invalid Input*/
+
+input:focus:invalid {
+    box-shadow: 0 0 15px red;
+    border-color: red;
+    color: tomato;
+}
+
+input:focus:valid {
+    border-color: green;
+    box-shadow: 0 0 15px green;
+}
+
+
+/* Table */
+
+table.table {
+    border-collapse: collapse;
+    width: 50%;
+    color: white;
+    margin: 0;
+    border: 1px solid white;
+}
+
+table.table tr th {
+    height: 50px;
+    background-color: rgb(169, 207, 44);
+    color: black;
+    border: 1px solid white;
+}
+
+table.table tr {
+    font-family: Andalus, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+table.table tr td {
+    border: 1px solid white;
+    color: black;
+}
+
+table.table tr td textarea {
+    font-weight: bold;
+}
+
+h2 {
+    font-family: Andalus, sans-serif;
+    color: white;
+    position: absolute;
+    margin-left: 44%;
+}
+
+
+/* --------------- Gallery Section ------------ */
+
+.gallery-article {
+    border: 2px solid black;
+    width: 200px;
+    float: left;
+    margin: 25px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.gallery-article:hover,.gallery-article a:hover {
+    box-shadow: 0 0 100px white;
+    color: white;
+    
+}
+
+.gallery-zoom {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-zoom img {
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    transition: all 0.8s;
+}
+
+.gallery-zoom:hover img {
+    transform: scale(1.3, 1.3);
+    cursor: pointer;
+}
+
+P {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/*a:hover{
+    font-weight: 700;
+}*/
+/* :: 21.0 Button Area CSS */
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    /*width: 160px;*/
+    /*width: 100%;*/
+    width:270px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    margin: auto;
+    height: 45px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    /*border-radius: 5px;*/
+    border-radius: 0 10px;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.btn-hover.color-3 {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+.btn-hover.color-4 {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+
+.btn-hover.color-5 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+.btn-hover.color-6 {
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+.btn-hover.color-7 {
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.btn-hover.color-9 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.btn-hover.color-10 {
+    background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.btn-hover.color-11 {
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+    box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
